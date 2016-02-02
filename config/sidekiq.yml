@@ -1,0 +1,11 @@
+---
+:concurrency: 4
+:require: ./worker.rb
+staging:
+  :concurrency: 4
+production:
+  :concurrency: 4
+:queues:
+  - [critical, 4]
+  - [default, 3]
+  - [seldom, 1]
